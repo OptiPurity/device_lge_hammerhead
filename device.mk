@@ -51,6 +51,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
 
+# F2FS 
+
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/format-system.sh:system/extras/format-system.sh
+
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
